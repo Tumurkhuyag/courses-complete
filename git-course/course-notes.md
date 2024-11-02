@@ -34,10 +34,10 @@
 | 14  | `git reset head [filename]`          | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                                     |
 | 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                                    |
 | 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                                       |
-| 17  | `git checkout -- [filename]`         | Өөрчилсөн файлыг буцааж болиулна                                                       |
+| 17  | `git checkout -- [filename]`         | Зөвхөн локал Өөрчилсөн файлыг буцааж болиулна                                          |
 | 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                                     |
-| 19  | `git checkout [sha1 hash]`           | Log доторх файлыг дэлгэрүүлж харна                                                     |
-| 20  | `git checkout master`                | Log доторх файлыг дэлгэрүүлж харна                                                     |
+| 19  | `git checkout [sha1 hash]`           | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                        |
+| 20  | `git checkout master`                | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                        |
 | 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ                   |
 | 22  | `cat [filename]`                     | Файл доторх контентыг харна                                                            |
 | 23  | `cat .git/head`                      | HEAD файл дотор одоогийн branch (head) аль "sha1hash" хувилбарыг зааж байгааг харуулна |
@@ -48,7 +48,8 @@
 | 28  | `git branch -D [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
 | 29  | `git checkout div`                   | Div branch -руу master branch -аас switch хийнэ                                        |
 | 30  | `git merge [branchName]`             | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө     |
-| 31  | `git checkout -b [branchName]`       | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                         |
+| 31  | `git checkout -b [branchName]`       | Зөвхөн локал Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                            |
+| 32  | `git clone [githubRepoHTTPS]`        | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                         |
 
 <br>
 
