@@ -50,6 +50,15 @@
 | 30  | `git merge [branchName]`             | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө     |
 | 31  | `git checkout -b [branchName]`       | Зөвхөн локал Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                            |
 | 32  | `git clone [githubRepoHTTPS]`        | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                         |
+| 33  | `git branch -a`                      | Local repo болон Github repo дээр байгаа бусад branch -ийг харна                       |
+| 34  | `git branch -r`                      | Зөвхөн remote git буюу Github repo дээр байгаа бусад branch -ийг харна                 |
+| 35  | `git branch -vv`                     | Remote repо -оос track хийж байгаа local branch -ийг харна                             |
+| 36  | `git checkout -b [branchName] origin/[branchName]`        | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно     |
+| 37  | `git checkout --track origin/[branchName]`                     | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно                             |
+| 38  | `git checkout dev`                     | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно                             |
+| 39  | `git remote show origin`                     | Origin гэсэн remote branch дотор байгаа дэлгэрэнгүй мэдээллийг харна                             |
+| 40  | `git fetch origin`                     | Origin гэсэн remote branch дотор байгаа бүх branch -уудад хийсэн өөрчлөлтүүдийг local git -рүү оруулж ирнэ                             |
+
 
 <br>
 
