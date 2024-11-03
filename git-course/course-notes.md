@@ -16,43 +16,48 @@
 
 ### Common Git Commands
 
-|     | Git коммандууд                       | Тайлбар                                                                                |
-| :-: | :----------------------------------- | :------------------------------------------------------------------------------------- |
-|  1  | `brew install git`                   | Homebrew буюу package manager ашиглан Git татаж суулгана                               |
-|  2  | `git init`                           | .Git file -ийг төсөл дотроо үүсгэнэ                                                    |
-|  3  | `git status`                         | Төслийн өөрчлөлтийг track хийнэ                                                        |
-|  4  | `ls -lah`                            | Төсөлтэй холбоотой Git -ийн тохиргоог шалгана                                          |
-|  5  | `rm -rf .git`                        | Төсөл дотор үүсгэсэн .Git file болон түүний тохиргоо тэр чигтэй устна                  |
-|  6  | `git remote -v`                      | Локал төсөл маань remote repository линктэй холбогдсоныг шалгаж харуулна               |
-|  7  | `git remote add origin [HTTPS линк]` | Локал төсөлтэй remote repository линкийг холбоно                                       |
-|  8  | `git add -A`                         | Төсөл дээр хийгдсэн бүх шинэчлэлтийг локал git дээр нэмнэ                              |
-|  9  | `git commit -m "тайлбар"`            | Локал git дээр нэмсэн бүх өөрчлөлтийг өөрчлөлт болгож баталгаажуулна                   |
-| 10  | `git push origin master`             | Локал git дээр баталгаажсан бүх өөрчлөлтийг Github repo -той merge хийнэ               |
-| 11  | `git checkout -- .`                  | Локал git дээр хамгийн сүүлд байсан хувилбарын дагуу бүх файлуудыг сэргээнэ            |
-| 12  | `rm [filename]`                      | Terminal -аар файл устгана                                                             |
-| 13  | `git restore --staged [filename]`    | Stage хийсэн файлыг буцааж болиулна                                                    |
-| 14  | `git reset head [filename]`          | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                                     |
-| 15  | `git rm --cached [filename]`         | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                                    |
-| 16  | `git restore [filename]`             | Өөрчилсөн файлыг буцааж болиулна                                                       |
-| 17  | `git checkout -- [filename]`         | Зөвхөн локал Өөрчилсөн файлыг буцааж болиулна                                          |
-| 18  | `git cat-file -p [sha1 hash]`        | Log доторх файлыг дэлгэрүүлж харна                                                     |
-| 19  | `git checkout [sha1 hash]`           | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                        |
-| 20  | `git checkout master`                | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                        |
-| 21  | `git commit -a -m "тайлбар"`         | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ                   |
-| 22  | `cat [filename]`                     | Файл доторх контентыг харна                                                            |
-| 23  | `cat .git/head`                      | HEAD файл дотор одоогийн branch (head) аль "sha1hash" хувилбарыг зааж байгааг харуулна |
-| 24  | `git branch`                         | Ямар branch -ууд манай repo дотор байгааг харуулна                                     |
-| 25  | `git branch [brancname]`             | Repo дотор шинэ branch үүсгэнэ                                                         |
-| 26  | `git branch -m [oldName] [newName]`  | Branch -ын нэрийг өөрчилнө                                                             |
-| 27  | `git branch -d [branchName]`         | Branch -ыг устгана                                                                     |
-| 28  | `git branch -D [branchName]`         | Branch -ыг дотроо файлтай байсан ч устна                                               |
-| 29  | `git checkout div`                   | Div branch -руу master branch -аас switch хийнэ                                        |
-| 30  | `git merge [branchName]`             | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө     |
-| 31  | `git checkout -b [branchName]`       | Зөвхөн локал Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                            |
-| 32  | `git clone [githubRepoHTTPS]`        | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                         |
-| 33  | `git branch -a`                      | Local repo болон github repo дээр байгаа бусад branch -ийг харна                       |
-| 34  | `git branch -r`                      | Зөвхөн remote git буюу github repo дээр байгаа бусад branch -ийг харна                 |
-| 35  | `git branch -vv`                     | Remote repо -оос track хийж байгаа local branch -ийг харна                             |
+|     | Git коммандууд                                     | Тайлбар                                                                                                    |
+| :-: | :------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+|  1  | `brew install git`                                 | Homebrew буюу package manager ашиглан Git татаж суулгана                                                   |
+|  2  | `git init`                                         | .Git file -ийг төсөл дотроо үүсгэнэ                                                                        |
+|  3  | `git status`                                       | Төслийн өөрчлөлтийг track хийнэ                                                                            |
+|  4  | `ls -lah`                                          | Төсөлтэй холбоотой Git -ийн тохиргоог шалгана                                                              |
+|  5  | `rm -rf .git`                                      | Төсөл дотор үүсгэсэн .Git file болон түүний тохиргоо тэр чигтэй устна                                      |
+|  6  | `git remote -v`                                    | Локал төсөл маань remote repository линктэй холбогдсоныг шалгаж харуулна                                   |
+|  7  | `git remote add origin [HTTPS линк]`               | Локал төсөлтэй remote repository линкийг холбоно                                                           |
+|  8  | `git add -A`                                       | Төсөл дээр хийгдсэн бүх шинэчлэлтийг локал git дээр нэмнэ                                                  |
+|  9  | `git commit -m "тайлбар"`                          | Локал git дээр нэмсэн бүх өөрчлөлтийг өөрчлөлт болгож баталгаажуулна                                       |
+| 10  | `git push origin master`                           | Локал git дээр баталгаажсан бүх өөрчлөлтийг Github repo -той merge хийнэ                                   |
+| 11  | `git checkout -- .`                                | Локал git дээр хамгийн сүүлд байсан хувилбарын дагуу бүх файлуудыг сэргээнэ                                |
+| 12  | `rm [filename]`                                    | Terminal -аар файл устгана                                                                                 |
+| 13  | `git restore --staged [filename]`                  | Stage хийсэн файлыг буцааж болиулна                                                                        |
+| 14  | `git reset head [filename]`                        | Stage хийсэн файлыг буцааж болиулах хоёр дахь арга                                                         |
+| 15  | `git rm --cached [filename]`                       | Stage хийсэн файлыг буцааж болиулах гурав дахь арга                                                        |
+| 16  | `git restore [filename]`                           | Өөрчилсөн файлыг буцааж болиулна                                                                           |
+| 17  | `git checkout -- [filename]`                       | Зөвхөн локал Өөрчилсөн файлыг буцааж болиулна                                                              |
+| 18  | `git cat-file -p [sha1 hash]`                      | Log доторх файлыг дэлгэрүүлж харна                                                                         |
+| 19  | `git checkout [sha1 hash]`                         | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                                            |
+| 20  | `git checkout master`                              | Зөвхөн локал Log доторх файлыг дэлгэрүүлж харна                                                            |
+| 21  | `git commit -a -m "тайлбар"`                       | Modified файлыг нэгэн зэрэг staged болон unmodified төлөвт шилжүүлнэ                                       |
+| 22  | `cat [filename]`                                   | Файл доторх контентыг харна                                                                                |
+| 23  | `cat .git/head`                                    | HEAD файл дотор одоогийн branch (head) аль "sha1hash" хувилбарыг зааж байгааг харуулна                     |
+| 24  | `git branch`                                       | Ямар branch -ууд манай repo дотор байгааг харуулна                                                         |
+| 25  | `git branch [brancname]`                           | Repo дотор шинэ branch үүсгэнэ                                                                             |
+| 26  | `git branch -m [oldName] [newName]`                | Branch -ын нэрийг өөрчилнө                                                                                 |
+| 27  | `git branch -d [branchName]`                       | Branch -ыг устгана                                                                                         |
+| 28  | `git branch -D [branchName]`                       | Branch -ыг дотроо файлтай байсан ч устна                                                                   |
+| 29  | `git checkout div`                                 | Div branch -руу master branch -аас switch хийнэ                                                            |
+| 30  | `git merge [branchName]`                           | Fast-forward merge: Master branch -аам `git merge [branchName]` гэсэн комманд өгнө                         |
+| 31  | `git checkout -b [branchName]`                     | Зөвхөн локал Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                                |
+| 32  | `git clone [githubRepoHTTPS]`                      | Repo дотор шинэ branch үүсгээд түүнрүү шилжинэ                                                             |
+| 33  | `git branch -a`                                    | Local repo болон Github repo дээр байгаа бусад branch -ийг харна                                           |
+| 34  | `git branch -r`                                    | Зөвхөн remote git буюу Github repo дээр байгаа бусад branch -ийг харна                                     |
+| 35  | `git branch -vv`                                   | Remote repо -оос track хийж байгаа local branch -ийг харна                                                 |
+| 36  | `git checkout -b [branchName] origin/[branchName]` | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно                         |
+| 37  | `git checkout --track origin/[branchName]`         | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно                         |
+| 38  | `git checkout dev`                                 | Local repo дээр tracking branch үүсгэж remote repo дээр байгаа branch -тай холбоно                         |
+| 39  | `git remote show origin`                           | Origin гэсэн remote branch дотор байгаа дэлгэрэнгүй мэдээллийг харна                                       |
+| 40  | `git fetch origin`                                 | Origin гэсэн remote branch дотор байгаа бүх branch -уудад хийсэн өөрчлөлтүүдийг local git -рүү оруулж ирнэ |
 
 <br>
 
